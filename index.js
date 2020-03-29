@@ -166,15 +166,15 @@ client.on("message", async msg => {
   if (msg.type == "ciphertext") {
     // Send a new message as a reply to the current one
     msg.reply("kirim ! menu atau !help untuk melihat menu.");
-  } else if (msg.body == "Bayuou") {
+  } else if (msg.body == "Creator" || "creator") {
     // Send a new message as a reply to the current one
-    msg.reply("Bayu gans tapi masih gans gw");
+    msg.reply("hai semuanya bot ini di buat oleh @safriyansyah077 <-- follow yah ignya");
   } else if (msg.body == "P" || msg.body == "p" || msg.body == "Woy") {
     // Send a new message to the same chat
     client.sendMessage(msg.from, "Selamat datang di bot safriansyah gans. Untuk menerima update informasi tentang corona silahkan ketik command 'corona'. Untuk melihat menu silahkan ketik 'menu'. TERIMAKASIH.");
-  } else if (msg.body == "Assalamualaikum" || msg.body == "assalamualaikum") {
+  } else if (msg.body == "hi" || msg.body == "Hi") {
      // Send a new message as a reply to the current one
-    client.sendMesssage(msg.from, "Waalaikumusallam. ada yang bisa saya bantu. Untuk melihat menu bot silahkan ketik 'menu' ");
+    client.sendMesssage(msg.from, "Selamat datang di bot safriansyah gans. Untuk menerima update informasi tentang corona silahkan ketik command 'corona'. Untuk melihat menu silahkan ketik 'menu'. TERIMAKASIH.");
   } else if (msg.body.startsWith("!sendto ")) {
     // Direct send a new message to specific id
     let number = msg.body.split(" ")[1];
@@ -194,13 +194,16 @@ client.on("message", async msg => {
       msg.from,
       `
 *PERINTAH*
-info/help  =>  Menu
-p =>  Tes aktif atau tidak
+Menu  =>  Menu
+P =>  Tes aktif atau tidak
+Creator => Untuk menunjukan pembuat bot
+Quran => Untuk menampilkan surah-surah didalam Al-Quran
+Location => Untuk menampilkan lokasi bot
 
 *COVID-19 Informasi* 
-aktif  =>  Mengaktifkan notifikasi
-mati  =>  Mematikan notifikasi
-corona  =>  Informasi COVID-19 Indonesia
+Untuk melihat informasi terkini tentang corona silahkan mengetik
+
+Corona  =>  Informasi COVID-19 Indonesia
 
 
 `
@@ -246,7 +249,7 @@ corona  =>  Informasi COVID-19 Indonesia
         caption: "Here's your requested media."
       });
     }
-  } else if (msg.body == "!location") {
+  } else if (msg.body == "Location") {
     msg.reply(
       new Location(37.422, -122.084, "Googleplex\nGoogle Headquarters")
     );
@@ -270,7 +273,7 @@ corona  =>  Informasi COVID-19 Indonesia
   } else if (msg.body === "!archive") {
     const chat = await msg.getChat();
     chat.archive();
-  } else if (msg.body === "!quran") {
+  } else if (msg.body === "Quran") {
     const chat = await msg.getChat();
     // simulates typing in the chat
   client.sendMessage(
