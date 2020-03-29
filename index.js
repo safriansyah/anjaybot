@@ -163,9 +163,9 @@ client.on("message", async msg => {
     msg.body ? `| ${msg.body}` : ""
   );
 
-  } else if (msg.type == "Akbar") {
+  if (msg.type == "ciphertext") {
     // Send a new message as a reply to the current one
-    msg.reply("Akbar itu babi mirip kontol. Gantengan Rian atau Faundra");
+    msg.reply("kirim ! menu atau !help untuk melihat menu.");
   } else if (msg.body == "Bayuou") {
     // Send a new message as a reply to the current one
     msg.reply("Bayu gans tapi masih gans gw");
