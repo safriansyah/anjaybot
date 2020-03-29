@@ -174,7 +174,7 @@ client.on("message", async msg => {
     client.sendMessage(msg.from, "Selamat datang di bot safriansyah gans. Untuk menerima update informasi tentang corona silahkan ketik command 'corona'. Untuk melihat menu silahkan ketik 'menu'. TERIMAKASIH.");
   } else if (msg.body == "hi" || msg.body == "Hi") {
      // Send a new message as a reply to the current one
-    client.sendMesssage(msg.from, "Selamat datang di bot safriansyah gans. Untuk menerima update informasi tentang corona silahkan ketik command 'corona'. Untuk melihat menu silahkan ketik 'menu'. TERIMAKASIH.");
+    client.sendMessage(msg.from, "Selamat datang di bot safriansyah gans. Untuk menerima update informasi tentang corona silahkan ketik command 'corona'. Untuk melihat menu silahkan ketik 'menu'. TERIMAKASIH.");
   } else if (msg.body.startsWith("!sendto ")) {
     // Direct send a new message to specific id
     let number = msg.body.split(" ")[1];
