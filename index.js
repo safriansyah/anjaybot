@@ -169,11 +169,11 @@ client.on("message", async msg => {
   } else if (msg.body == "!ping reply") {
     // Send a new message as a reply to the current one
     msg.reply("pong");
-  } else if (msg.body == "p") {
+  } else if (msg.body == "P" || msg.body == "p" || msg.body == "Woy") {
     // Send a new message to the same chat
-    client.sendMessage(msg.from, "kok");
-  } else if (msg.body == " assallamuallaikum") {
-    client.sendMesssage(msg.from, "Waalaikumusallam");
+    client.sendMessage(msg.from, "iyah ada yang bisa saya bantu. ketik command (corona) untuk mendapatkan informasi update seputar virus corona");
+  } else if (msg.body == "Assalamualaikum" || msg.body == "assalamualaikum") {
+    client.sendMesssage(msg.from, "Waalaikumusallam. ada yang bisa saya bantu");
   } else if (msg.body.startsWith("!sendto ")) {
     // Direct send a new message to specific id
     let number = msg.body.split(" ")[1];
