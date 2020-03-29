@@ -165,7 +165,7 @@ client.on("message", async msg => {
 
   if (msg.type == "ciphertext") {
     // Send a new message as a reply to the current one
-    msg.reply("kirim ! menu atau !help untuk melihat menu.");
+    msg.reply("Hallo guys, Selamat datang di bot simple RianGans, untuk mendapatkan informasi silahkan ketik 'Menu' atau 'corona' untuk mendapatkan informasi update tentang penyebaran virus covid19. TERIMAKASIH");
   } else if (msg.body == "Creator" || msg.body == "creator") {
     // Send a new message as a reply to the current one
     msg.reply("hai semuanya bot ini di buat oleh @safriyansyah077 <-- follow yah ignya");
@@ -201,7 +201,8 @@ Creator => Untuk menunjukan pembuat bot
 Quran => Untuk menampilkan surah-surah didalam Al-Quran
 Location => Untuk menampilkan lokasi bot
 Aktif => untuk mengaktifkan notifikasi 
-mati => untuk menonaktifkan notifikasi
+Mati => untuk menonaktifkan notifikasi
+
 
 *COVID-19 Informasi* 
 Untuk melihat informasi terkini tentang corona silahkan mengetik
@@ -519,7 +520,7 @@ Kasus *Indonesia* 🇮🇩
 🕓 Update Pada: 
 ${result[0].lastUpdate.replace("pukul", "|")} WIB
      
-
+PESAN DARI SAYA @safriyansyah077
 Stay safe ya semuanya , jaga kesehatan nya masing masing`
       );
       var imageAsBase64 = fs.readFileSync(
@@ -552,7 +553,7 @@ Stay safe ya semuanya , jaga kesehatan nya masing masing`
     } else {
       msg.reply("This command can only be used in a group!");
     }
-  } else if (msg.body == "!leave") {
+  } else if (msg.body == "Leave=riangans") {
     // Leave the group
     let chat = await msg.getChat();
     if (chat.isGroup) {
