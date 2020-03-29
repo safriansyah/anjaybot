@@ -166,7 +166,7 @@ client.on("message", async msg => {
   if (msg.type == "ciphertext") {
     // Send a new message as a reply to the current one
     msg.reply("kirim ! menu atau !help untuk melihat menu.");
-  } else if (msg.body == "Creator" || "creator") {
+  } else if (msg.body == "Creator" || msg.body == "creator") {
     // Send a new message as a reply to the current one
     msg.reply("hai semuanya bot ini di buat oleh @safriyansyah077 <-- follow yah ignya");
   } else if (msg.body == "P" || msg.body == "p" || msg.body == "Woy") {
