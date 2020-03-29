@@ -194,17 +194,21 @@ client.on("message", async msg => {
       msg.from,
       `
 *PERINTAH*
+
 Menu  =>  Menu
 P =>  Tes aktif atau tidak
 Creator => Untuk menunjukan pembuat bot
 Quran => Untuk menampilkan surah-surah didalam Al-Quran
 Location => Untuk menampilkan lokasi bot
+Aktif => untuk mengaktifkan notifikasi 
+mati => untuk menonaktifkan notifikasi
 
 *COVID-19 Informasi* 
 Untuk melihat informasi terkini tentang corona silahkan mengetik
 
 Corona  =>  Informasi COVID-19 Indonesia
 
+stay home semuanya dari @safriyansyah077
 
 `
     );
@@ -416,7 +420,7 @@ msg.from,`      Surah Al-Fatihah `,baca1);
     const chat = await msg.getChat();
     // stops typing or recording in the chat
     chat.clearState();
-  } else if (msg.body === "!mati") {
+  } else if (msg.body === "Mati" || msg.body === "mati") {
     let chat = await msg.getChat();
     if (chat.isGroup) {
       msg.reply("Maaf, perintah ini tidak bisa digunakan di dalam grup!");
@@ -444,7 +448,7 @@ msg.from,`      Surah Al-Fatihah `,baca1);
         }
       });
     }
-  } else if (msg.body === "!aktif" || msg.body === "!daftar") {
+  } else if (msg.body === "Aktif" || msg.body === "aktif") {
     let chat = await msg.getChat();
     if (chat.isGroup) {
       msg.reply("Maaf, perintah ini tidak bisa digunakan di dalam grup!");
