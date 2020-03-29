@@ -163,7 +163,7 @@ client.on("message", async msg => {
     msg.body ? `| ${msg.body}` : ""
   );
 
-  if (msg.type == "Akbar") {
+  } else if (msg.type == "Akbar") {
     // Send a new message as a reply to the current one
     msg.reply("Akbar itu babi mirip kontol. Gantengan Rian atau Faundra");
   } else if (msg.body == "Bayuou") {
@@ -173,7 +173,8 @@ client.on("message", async msg => {
     // Send a new message to the same chat
     client.sendMessage(msg.from, "Selamat datang di bot safriansyah gans. Untuk menerima update informasi tentang corona silahkan ketik command 'corona'. Untuk melihat menu silahkan ketik 'menu'. TERIMAKASIH.");
   } else if (msg.body == "Assalamualaikum" || msg.body == "assalamualaikum") {
-    client.sendMesssage(msg.from, "Waalaikumusallam. ada yang bisa saya bantu. Untuk melihat menu bot silahkan ketik 'menu' .");
+     // Send a new message as a reply to the current one
+    client.sendMesssage(msg.from, "Waalaikumusallam. ada yang bisa saya bantu. Untuk melihat menu bot silahkan ketik 'menu' ");
   } else if (msg.body.startsWith("!sendto ")) {
     // Direct send a new message to specific id
     let number = msg.body.split(" ")[1];
