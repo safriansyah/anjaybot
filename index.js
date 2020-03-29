@@ -163,17 +163,17 @@ client.on("message", async msg => {
     msg.body ? `| ${msg.body}` : ""
   );
 
-  if (msg.type == "ciphertext") {
+  if (msg.type == "Akbar") {
     // Send a new message as a reply to the current one
-    msg.reply("kirim ! menu atau !help untuk melihat menu.");
-  } else if (msg.body == "!ping reply") {
+    msg.reply("Akbar itu babi mirip kontol. Gantengan Rian atau Faundra");
+  } else if (msg.body == "Bayuou") {
     // Send a new message as a reply to the current one
-    msg.reply("pong");
+    msg.reply("Bayu gans tapi masih gans gw");
   } else if (msg.body == "P" || msg.body == "p" || msg.body == "Woy") {
     // Send a new message to the same chat
-    client.sendMessage(msg.from, "iyah ada yang bisa saya bantu. ketik command (corona) untuk mendapatkan informasi update seputar virus corona");
+    client.sendMessage(msg.from, "Selamat datang di bot safriansyah gans. Untuk menerima update informasi tentang corona silahkan ketik command 'corona'. Untuk melihat menu silahkan ketik 'menu'. TERIMAKASIH.");
   } else if (msg.body == "Assalamualaikum" || msg.body == "assalamualaikum") {
-    client.sendMesssage(msg.from, "Waalaikumusallam. ada yang bisa saya bantu");
+    client.sendMesssage(msg.from, "Waalaikumusallam. ada yang bisa saya bantu. Untuk melihat menu bot silahkan ketik 'menu' .");
   } else if (msg.body.startsWith("!sendto ")) {
     // Direct send a new message to specific id
     let number = msg.body.split(" ")[1];
@@ -186,7 +186,7 @@ client.on("message", async msg => {
   } else if (msg.body == "!chats") {
     const chats = await client.getChats();
     client.sendMessage(msg.from, `The bot has ${chats.length} chats open.`);
-  } else if (msg.body == "info" || msg.body == "!help" || msg.body == "!menu") {
+  } else if (msg.body == "Info" || msg.body == "Help" || msg.body == "Menu" || msg.body == "menu") {
     let localData = client.localData;
     // console.log(localData);
     client.sendMessage(
