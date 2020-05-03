@@ -166,12 +166,12 @@ client.on("message", async msg => {
   if (msg.type == "ciphertext") {
     // Send a new message as a reply to the current one
     msg.reply("Hallo guys, Selamat datang di bot simple RianGans, untuk mendapatkan informasi silahkan ketik 'Menu' atau 'corona' untuk mendapatkan informasi update tentang penyebaran virus covid19. TERIMAKASIH");
-  } else if (msg.body == "Creator" || msg.body == "creator") {
+  } else if (msg.body == "/Creator" || msg.body == "/creator") {
     // Send a new message as a reply to the current one
     msg.reply("hai semuanya bot ini di buat oleh @safriyansyah077 <-- follow yah ignya");
-  } else if (msg.body == "P" || msg.body == "p" || msg.body == "Woy") {
+  } else if (msg.body == "/Testaktif" || msg.body == "/testaktif") {
     // Send a new message to the same chat
-    client.sendMessage(msg.from, "Selamat datang di bot safriansyah gans. Untuk menerima update informasi tentang corona silahkan ketik command 'corona'. Untuk melihat menu silahkan ketik 'menu'. TERIMAKASIH.");
+    client.sendMessage(msg.from, "Selamat datang di bot safriansyah gans. Untuk menerima update informasi tentang corona silahkan ketik command '/corona'. Untuk melihat menu silahkan ketik '/menu'. TERIMAKASIH.");
   } else if (msg.body == "hi" || msg.body == "Hi") {
      // Send a new message as a reply to the current one
     client.sendMessage(msg.from, "Selamat datang di bot safriansyah gans. Untuk menerima update informasi tentang corona silahkan ketik command 'corona'. Untuk melihat menu silahkan ketik 'menu'. TERIMAKASIH.");
@@ -187,27 +187,29 @@ client.on("message", async msg => {
   } else if (msg.body == "!chats") {
     const chats = await client.getChats();
     client.sendMessage(msg.from, `The bot has ${chats.length} chats open.`);
-  } else if (msg.body == "Info" || msg.body == "Help" || msg.body == "Menu" || msg.body == "menu") {
+  } else if (msg.body == "/Menu" || msg.body == "/menu") {
     let localData = client.localData;
     // console.log(localData);
     client.sendMessage(
       msg.from,
       `
-*PERINTAH*
+*SELAMAT DATANG*
 
-Menu  =>  Menu
-P =>  Tes aktif atau tidak
-Creator => Untuk menunjukan pembuat bot
-Quran => Untuk menampilkan surah-surah didalam Al-Quran
-Location => Untuk menampilkan lokasi bot
-Aktif => untuk mengaktifkan notifikasi 
-Mati => untuk menonaktifkan notifikasi
+*LIST MENU :*
+
+/menu  =>  Menu
+/testaktif =>  Tes aktif atau tidak
+/creator => Untuk menunjukan pembuat bot
+/quran => Untuk menampilkan surah-surah didalam Al-Quran
+/location => Untuk menampilkan lokasi bot
+/aktif => untuk mengaktifkan notifikasi 
+/mati => untuk menonaktifkan notifikasi
 
 
 *COVID-19 Informasi* 
 Untuk melihat informasi terkini tentang corona silahkan mengetik
 
-Corona  =>  Informasi COVID-19 Indonesia
+/corona  =>  Informasi COVID-19 Indonesia
 
 stay home semuanya dari @safriyansyah077
 
@@ -493,7 +495,7 @@ Sumber: _https://www.worldometers.info/coronavirus/_
       var CoronaImage = new MessageMedia("image/png", imageAsBase64);
       client.sendMessage(msg.from, CoronaImage);
     });
-  } else if (msg.body === "corona" || msg.body === "Corona" || msg.body === "/corona") {
+  } else if (msg.body === "/Corona" || msg.body === "/corona") {
     corona.getAll().then(result => {
       var aktifIndo =
         result[0].confirmed - result[0].recovered - result[0].deaths;
