@@ -256,7 +256,7 @@ stay home semuanya dari @safriyansyah077
         caption: "Here's your requested media."
       });
     }
-  } else if (msg.body == "Location") {
+  } else if (msg.body == "/location") {
     msg.reply(
       new Location(37.422, -122.084, "Googleplex\nGoogle Headquarters")
     );
@@ -280,7 +280,7 @@ stay home semuanya dari @safriyansyah077
   } else if (msg.body === "!archive") {
     const chat = await msg.getChat();
     chat.archive();
-  } else if (msg.body === "Quran") {
+  } else if (msg.body === "/quran" || msg.body == "/Quran") {
     const chat = await msg.getChat();
     // simulates typing in the chat
   client.sendMessage(
@@ -423,7 +423,7 @@ msg.from,`      Surah Al-Fatihah `,baca1);
     const chat = await msg.getChat();
     // stops typing or recording in the chat
     chat.clearState();
-  } else if (msg.body === "Mati" || msg.body === "mati") {
+  } else if (msg.body === "Mati" || msg.body === "/mati") {
     let chat = await msg.getChat();
     if (chat.isGroup) {
       msg.reply("Maaf, perintah ini tidak bisa digunakan di dalam grup!");
@@ -451,7 +451,7 @@ msg.from,`      Surah Al-Fatihah `,baca1);
         }
       });
     }
-  } else if (msg.body === "Aktif" || msg.body === "aktif") {
+  } else if (msg.body === "Aktif" || msg.body === "/aktif") {
     let chat = await msg.getChat();
     if (chat.isGroup) {
       msg.reply("Maaf, perintah ini tidak bisa digunakan di dalam grup!");
